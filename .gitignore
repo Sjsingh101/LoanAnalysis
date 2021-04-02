@@ -1,2 +1,6 @@
 test/
 .env
+Cert/
+__pycache__/
+static/
+templates/

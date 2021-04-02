@@ -1,10 +1,14 @@
-from flask import Flask, request, send_from_directory
+from flask import Flask, request, send_from_directory, render_template
 from dotenv import load_dotenv
 
 load_dotenv()
 
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+   return render_template('home.html')
 
 @app.route('/csv', methods = ['POST'])
 def get_csv():
