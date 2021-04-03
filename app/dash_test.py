@@ -115,7 +115,7 @@ def update_bar_chart(otype):
     [Input("url", "pathname")]
 )
 def render_page_content(pathname):
-    
+    load_data()
     if pathname == "/":
         ownership =  data.ownership.value_counts()
         ownership_type = ownership.index.values
@@ -171,8 +171,8 @@ def render_page_content(pathname):
         df1 = data[data.defaulter==1].grade.value_counts()
         df2 = data.grade.value_counts()
         ratio_def = ((df1/df2)*100)
-        print("R")
-        print(ratio_def.index)
+        #print("R")
+        #print(ratio_def.index)
         
 
         def_ownership =  data[data.defaulter==1].ownership.value_counts()

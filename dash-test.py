@@ -216,4 +216,4 @@ def render_page_content(pathname):
 
 if __name__=='__main__':
     load_data()
-    app.run_server(debug=True, port=3000)
+    app.run_server(threaded=True, debug=True, port=3000)
