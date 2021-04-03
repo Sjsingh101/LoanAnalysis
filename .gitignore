@@ -1,5 +1,6 @@
 test/
 .env
+app/env.list
 Cert/
 __pycache__/
 static/
